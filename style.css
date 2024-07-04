@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+:root {
+  --azul: rgba(0, 5, 118, 1);
+  --blanco: white;
+  --amarillo: yellow;
+  --marco: #20258d;
+}
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Manrope-Regular';
+  src: url('/fonts/Manrope-Regular.ttf') format('truetype');
+}
+
+
+body {
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-family: sans-serif;
+  margin: 3%;
+ 
+  
+
+}
+h1 {
+  font-family: 'BebasNeue-regular';
+  font-weight: 400;
+  font-size: 8em;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-family: 'BebasNeue-regular', san sans-serif;
+  font-weight: 400;
+  font-size: 7em;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 200;
+}
+a {
+  color: var(--amarillo);
+  font-family: 'Manrope-Regular', sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6em;
+  border-bottom: 1px solid #20258d;
+  padding-bottom: 1em;
+}
+header {
+  position: sticky;
+  top: 0px;
+  background-color: rgba(0, 0, 255, 0.02);
+  backdrop-filter: blur(10px);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+nav ul li {
+  text-decoration: none;
+  padding: 2em;
+}
+nav ul li a {
+  text-decoration: none;
+}
+.soycesar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+  margin-bottom: 20em;
+}
+.soycesar img {
+  border-radius: 20px;
+  
+}
+article.imgcv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+p {
+  font-family: 'Manrope-Regular', sans-serif;
+}
+article.text,
+article.text p {
+  padding-bottom: 4em;
+}
+button {
+  background-color: var(--amarillo);
+  padding: 1em;
+  border-radius: 50px;
+  width: 176px;
+  height: 45px;
+}
+button:hover {
+  scale: 1.1;
+}
+section#proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+  margin-bottom: 20em;
+}
+section#proyectos > article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+section#proyectos > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+img {
+  border-radius: 12px;
+}
+.frame {
+  background-color: var(--marco);
+  width: 618px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+div.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 0;
+  border-bottom: 1px solid grey;
+}
+#sobremi {
+  display: flex;
+  flex-direction: row;
+  padding: 8em 0;
+  margin-bottom: 20em;
+}
+
+#sobremi > article {
+  width: 50%;
+}
+#contacto {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20em;
+}
+#contacto > article {
+  width: 50%;
+  padding-right: 8em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+input[type='text'],
+input[type='email'] {
+  margin-bottom: 1.5em;
+}
+label {
+  font-size: 0.8em;
+  padding-bottom: 0.5em;
+}
+form > input,
+textarea {
+  padding: 1em;
+  background-color: #20258d;
+  border: none;
+}
+form > button {
+  margin-top: 2em;
+}
+hr {
+  border-color: #20258d;
+  margin: 3em 0;
+}
+footer > ul {
+  text-align: center;
+  list-style-type: none;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+footer > ul > li {
+  margin: 1em;
+}
+
+footer > p {
+  text-align: left;
+  font-size: 0.7em;
+}
+/* .mov{
+  display: none;
+} */
+input#menu {
+  display: none;
+}
+label [for="menu"] {
+  display: block;
+  border: 1px solid #20258d;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--amarillo);
+  
+}
+
+nav.mov > ul > li {
+  display: flex;
+  padding: 1em;
+  list-style: none;
+  
+}
+nav.mov{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav.mov > ul{
+  display: none;
+}
+input:checked  ~ ul{
+  display:block;
+}
+
+
