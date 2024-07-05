@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 :root {
   --azul: rgba(0, 5, 118, 1);
@@ -20,15 +19,16 @@
   src: url('/fonts/Manrope-Regular.ttf') format('truetype');
 }
 
-
 body {
   background-color: var(--azul);
   color: var(--blanco);
   font-family: sans-serif;
   margin: 3%;
- 
+}
+main {
+  display: flex;
+  flex-direction: column;
   
-
 }
 h1 {
   font-family: 'BebasNeue-regular';
@@ -78,18 +78,25 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
 }
-.soycesar {
+section.soycesar {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
-  margin-bottom: 20em;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  
+  margin-bottom: 10em;
+  max-width: 1200px;
+  gap: 1rem;
 }
 .soycesar img {
   border-radius: 20px;
-  
 }
+/* section.soycesar {
+  display: flex;
+  flex-direction: column;
+} */
 article.imgcv {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 p {
@@ -214,7 +221,7 @@ footer > p {
 input#menu {
   display: none;
 }
-label [for="menu"] {
+label [for='menu'] {
   display: block;
   border: 1px solid #20258d;
   border-radius: 5px;
@@ -224,25 +231,52 @@ label [for="menu"] {
   font-weight: bold;
   text-align: center;
   color: var(--amarillo);
-  
 }
 
 nav.mov > ul > li {
   display: flex;
   padding: 1em;
   list-style: none;
-  
 }
-nav.mov{
+nav.mov {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-nav.mov > ul{
+nav.mov > ul {
   display: none;
 }
-input:checked  ~ ul{
-  display:block;
+input:checked ~ ul {
+  display: block;
 }
 
+@media (max-width: 1024px) {
+  section.soycesar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.soycesar {
+    display: flex;
+    flex-direction: column;
+  }
 
+  article.text {
+    text-align: center;
+  }
+  section#proyectos {
+    align-items: center;
+    text-align: center;
+  }
+  section#proyectos > article {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  section#sobremi {
+    flex-direction: column;
+    align-items: center;
+  }
+  section#contacto {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+}
